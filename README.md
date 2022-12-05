@@ -34,3 +34,8 @@ MouseTracker.tsx:15 remove effect 0
 MouseTracker.tsx:7 
 
 - 控制 useEffect 的执行时机，添加控制变量
+
+## 自定义 Hook
+- 将组件逻辑提取到可重用的函数中
+
+- 代码时间：使用自定义的Hook抽象跟踪器
