@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
-        "jsx": "react"
+        "jsx": "react",         // jsx 语法
+        "esModuleInterop": true // 决定使用 import from
     },
     "include": ["src/*"]
 }
