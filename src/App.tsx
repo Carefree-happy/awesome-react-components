@@ -3,7 +3,7 @@ import Hello from './components/Hello';
 
 const App: React.FC = () => {
   return (
-    <Hello message={'sdsd'}/>
+    <Hello message="Hello World"/>
   );
 }
 
