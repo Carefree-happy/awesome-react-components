@@ -13,3 +13,7 @@
 [@types/jquery](https://npmjs.com/package/@types/jquery)
 
 [类型插件查询](https://www.typescriptlang.org/dt/search?search=)
+
+npx 作用
+- 避免安装全局模块
+- 调用项目内部安装的模块
