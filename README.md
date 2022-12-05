@@ -39,3 +39,10 @@ MouseTracker.tsx:7
 - 将组件逻辑提取到可重用的函数中
 
 - 代码时间：使用自定义的Hook抽象跟踪器
+
+- HOC (Higher order component) 函数接收一个组件为参数，返回一个新的组件
+  - cd node_modules/axios
+  - ls
+  - cat package.json 可以查看axios是否有type检查文件
+  - [axios api](https://dog.ceo/dog-api/)
+  - 缺点：代码难以理解；逻辑复杂
