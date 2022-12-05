@@ -17,3 +17,20 @@
 npx 作用
 - 避免安装全局模块
 - 调用项目内部安装的模块
+
+Effect Hook
+
+- 无需清除的 Effect: 例如使用DOM更新title
+    componentDidMount() componentDidUpdate()
+
+- 需要清除的 Effect: 例如完成一个鼠标跟踪器
+    componentDidMount() componentDidUpdate()
+    document.removeEventListener("click", this.updateMouse)
+mouseTracker 点击动作
+inner
+MouseTracker.tsx:20 before render 157
+MouseTracker.tsx:20 before render 157
+MouseTracker.tsx:15 remove effect 0
+MouseTracker.tsx:7 
+
+- 控制 useEffect 的执行时机，添加控制变量
