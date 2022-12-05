@@ -1,12 +1,28 @@
+import { data } from "jquery";
 import React, { useState } from "react"
 import Hello from './components/Hello';
 import LikeButton from './components/LikeButton';
 import MouseTracker from './components/MouseTracker';
+import withLoader from './components/withLoader';
 import useMousePosition from './hooks/useMousePosition';
+
+interface IShowResult {
+    message: string,
+    status: string,
+}
+const DogShow: React.FC<{data: IShowResult}> = ({ data }) => {
+    return (
+        <>
+            <h2>Dog show: {data.status}</h2>
+            <img src={data.message}/>
+        </>
+    )
+}
 
 const App: React.FC = () => {
     const [show, setShow] = useState(false)
-    const position = useMousePosition()
+    const WrappedDogShow = withLoader(DogShow, 'https://dog.ceo/api/breeds/image/random')
+    // const position = useMousePosition()
 
     return (
         <>
@@ -14,7 +30,8 @@ const App: React.FC = () => {
             <LikeButton />
             <button onClick={() => {setShow(!show)}}>{!show ? "SHOW" : "HIDDEN"}</button>
             {show && <MouseTracker />}
-            <p>X: {position.x} , Y: {position.y}</p>
+            {/* <p>X: {position.x} , Y: {position.y}</p> */}
+            <WrappedDogShow />
         </>
     );
 }
