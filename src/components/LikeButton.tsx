@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useContext } from "react"
+import { ThemeContext } from "../App"
 
 const LikeButton: React.FC = () => {
     const [like, setLike] = useState(0)
     const [on, setOn] = useState(false)
+
+    const theme = useContext(ThemeContext)
+    console.log(theme)
 
     useEffect(() => {
         console.log("document title effect is running")
@@ -11,7 +15,7 @@ const LikeButton: React.FC = () => {
     console.log("like button is running")
     return (
         <>
-            <button onClick={() => { setLike(like + 1) }}>
+            <button onClick={() => { setLike(like + 1) }} style={theme}>
                 {like} 👍
             </button>
             <button onClick={() => { setOn(!on) }}>

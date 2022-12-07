@@ -46,3 +46,8 @@ MouseTracker.tsx:7
   - cat package.json 可以查看axios是否有type检查文件
   - [axios api](https://dog.ceo/dog-api/)
   - 缺点：代码难以理解；逻辑复杂
+  
+- 规则：只在最顶层中使用 Hook；只在 React 函数中调用 Hook.
+
+[Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
+[React 官方推荐](https://usehooks.com/)
